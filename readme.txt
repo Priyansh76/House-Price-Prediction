@@ -1,42 +1,26 @@
-This project builds a Machine Learning model to predict housing prices using the California Housing dataset.
-It demonstrates a complete end-to-end machine learning pipeline including data preprocessing, stratified sampling, model training, and prediction.
+Predicting house prices is a key challenge in the real estate industry, helping buyers, sellers and investors make informed decisions. By using machine learning algorithms, we can estimate the price of a house based on various features such as location, size, number of bedrooms and other relevant factors.
 
-Project Overview:
+The dataset contains 13 key features:
 
-The main goal of this project is to predict the median house value based on different housing features such as:
-1. Median income
-2. Total rooms
-3. Total bedrooms
-4. Population
-5. Households
-6. Housing location
-7. Ocean proximity
-This project uses Random Forest Regressor along with a professional Scikit-Learn pipeline for preprocessing and prediction.
+Id: Unique identifier for each record.
+MSSubClass: Type of dwelling involved in the sale.
+MSZoning: General zoning classification of the property.
+LotArea: Lot size in square feet.
+LotConfig: Configuration of the lot.
+BldgType: Type of dwelling.
+OverallCond: Overall condition rating of the house.
+YearBuilt: Original construction year.
+YearRemodAdd: Remodel year (same as construction year if no remodeling).
+Exterior1st: Exterior covering of the house.
+BsmtFinSF2: Type 2 finished square feet of the basement.
+TotalBsmtSF: Total basement area in square feet.
+SalePrice: The target variable we aim to predict.
 
-Technologies Used:
+Technologies used in the project:
 
-1. Python
-2. Pandas
-3. NumPy
-4. Scikit-learn
-
-Machine Learning Workflow:
-
-1. Data Loading
-The California housing dataset is loaded using Pandas.
-
-2. Stratified Sampling
-The dataset is split using StratifiedShuffleSplit based on income_cat so that the train and test sets maintain a similar income distribution.
-
-3. Data Preprocessing Pipeline
-The project creates two pipelines:
-A. Numerical Pipeline- Missing value handling using SimpleImputer(strategy="median") and Feature scaling using StandardScaler
-B. Categorical Pipeline- Categorical feature transformation using OneHotEncoder(handle_unknown="ignore")
-
-These two pipelines are combined using ColumnTransformer.
-
-4. Model Training
-A RandomForestRegressor model is trained on the prepared housing data.
-
-5. Model Saving
-The trained model and pipeline are saved using Joblib so they can be reused later without retraining.
+Python- Main programming language for implementing the project.
+Pandas- Loading, cleaning, and manipulating housing datasets.
+NumPy- Numerical computations and array operations.
+Scikit-learn- Building, training, and evaluating machine learning models.
+Matplotlib- Creating graphs and visualizing housing data.
+Jupyter Notebook- For an environment for writing and running Python code interactively.
